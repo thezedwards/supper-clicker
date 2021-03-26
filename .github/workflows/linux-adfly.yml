@@ -1,4 +1,4 @@
-name: auto-build-linux
+name: auto-build-linux-adf
 on: 
   workflow_dispatch:
 defaults:
